@@ -17,7 +17,6 @@ function ResponseDisplay({ responseData }) {
       const key = option.value;
       const data = responseData[key];
 
-      // Handle undefined or empty values gracefully
       if (!data || (Array.isArray(data) && data.length === 0)) {
         return (
           <p key={key} className="mt-2 text-gray-700">
@@ -26,7 +25,6 @@ function ResponseDisplay({ responseData }) {
         );
       }
 
-      // Render the response data dynamically
       return (<>
       <h1 className="mt-3 font-semibold text-lg">Filtered Response</h1>
         <p key={key} className="mt-2 text-gray-700">
