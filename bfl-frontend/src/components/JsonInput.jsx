@@ -12,7 +12,7 @@ function JsonInput({ setResponseData }) {
     try {
       const parsedJson = JSON.parse(jsonInput);
       const response = await axios.post(
-        "http://localhost:3000/bfhl",
+        "https://bajaj-finserv-backend-yl92.onrender.com/bfhl",
         parsedJson
       );
       setResponseData(response.data);
